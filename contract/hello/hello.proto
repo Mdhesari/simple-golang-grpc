@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option go_package="mdhesari/simple-golang-grpc/contract/hello";
+
+package hello;
+
+service Greeter {
+    rpc SayHello (HelloRequest) returns (HelloRespone) {}
+}
+
+message HelloRequest {
+    string name = 1;
+}
+
+message HelloRespone {
+    string message = 1;
+}
